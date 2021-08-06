@@ -1,0 +1,51 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  padding: 30px;
+}
+
+input {
+  border-radius: 5px;
+  color: grey;
+  font-size: 1.2em;
+  width: 50%;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  align-content: center;
+  background-color: #6E817B;
+  border: 1px solid grey;
+  border-radius: 5px; /* 5px rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 5px;
+  padding: 2%;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+  border-radius: 5px;
+  max-height: 170px;
+}
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+
+
+
