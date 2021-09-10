@@ -2,4 +2,16 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+// import '@testing-library/jest-dom'; /* Dependencias que están por Default */
+
+// Paquete y adaptador de la librería Enzyme
+import Enzyme from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+// Crear SnapShots
+import { createSerializer } from 'enzyme-to-json';
+// import '@testing-library/jest-dom/extend-expect';
+
+// Configuración del SnapShot
+Enzyme.configure({ adapter: new Adapter() });
+expect.addSnapshotSerializer( createSerializer({ mode: 'deep' }) );

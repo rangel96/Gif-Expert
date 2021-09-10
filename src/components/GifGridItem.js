@@ -1,8 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const GifGridItem = props => {
-
-    const { url, title } = props;
+const GifGridItem = ({ url, title }) => {
 
     return (
         <div className="card animate__animated animate__backInUp">
@@ -11,5 +10,10 @@ const GifGridItem = props => {
         </div>
     );
 };
+
+GifGridItem.propTypes = {
+    url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+}
 
 export default GifGridItem;

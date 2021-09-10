@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import GifGridItem from './GifGridItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 // import PropTypes from 'prop-types';
@@ -21,6 +22,10 @@ const GifGrid = ({ category }) => {
             { imgs.length === 0 && <p className="animate__animated animate__shakeX">Gif not found</p> }
         </>
     );
+};
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired,
 };
 
 
